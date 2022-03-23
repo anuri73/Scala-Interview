@@ -85,7 +85,7 @@ With `scala.concurrent.Future` you get instead a real non-blocking computation, 
 
 * ### What is the difference between `unapply` and `apply`, when would you use them?
 
-> when you treat your object like a function, apply is the method that is called
+> when you treat your object like a function, apply is the method that is called.
 > `unaply` deconstructs an instance of class, and is the foundation of pattern matching
 
 * ### What is the difference between the following terms and types in Scala: `Nil`, `Null`, `None`, `Nothing`? The `None` is
