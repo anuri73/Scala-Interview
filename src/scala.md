@@ -94,6 +94,8 @@ With `scala.concurrent.Future` you get instead a real non-blocking computation, 
 `Nothing` is another Scala trait. It’s a subtype of any other type, and it has no subtypes. It exists due to the complex type system Scala has. It has zero instances. It’s the return type of method that never returns normally, for instance, a method that always throws an exception. The reason Scala has a bottom type is tied to its ability to express variance in type parameters… Finally, `Nil` represents an empty List of anything of size zero. `Nil` is of type `List[Nothing]`. All these types can create a sense of emptiness right? Here’s a little help to understand emptiness in Scala.
 ![Hierarchy](../img/hierarchy.png)
 
+* ### What is the difference between `{}` and `()`?
+
 * ### What is `Unit`?
 
 > Unit is a type which represents the absence of value, just like Java void. It is a subtype of scala.AnyVal. There is only one value of type Unit, represented by (), and it is not represented by any object in the underlying runtime system.
