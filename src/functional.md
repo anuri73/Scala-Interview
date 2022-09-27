@@ -1,5 +1,11 @@
 # Functional Programming Questions:
 
+* ### What is pure function?
+
+> Function without side effect (has no io, doesn't change variables, doesn't communicate with world)
+> For a given set of argument it will always return the same result
+> Referentially transparent (function call could be replaced by result of function)
+
 * ### Explain implicit classes with syntax?
 
 > Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
