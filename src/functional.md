@@ -6,6 +6,10 @@
     > For a given set of argument it will always return the same result
     > Referentially transparent (function call could be replaced by result of function)
 
+### Exactly what is a (pure) function?
+
+    A function with input type A and output type B (written in Scala as a single type: A => B) is a computation which relates every value a of type A to exactly one value b of type B such that b is determined solely by the value of a.
+
 ### What is side effect?
 
     > Reassigning a variable
@@ -15,6 +19,10 @@
     > Printing to console or reading user input
     > Reading from or writing to a file
     > Drawing the screen
+
+### What does observable mean?
+
+    ???
 
 * ### Explain implicit classes with syntax?
 
