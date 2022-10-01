@@ -61,19 +61,19 @@ With higher-kinded type, we created Collection which can work with any of the co
 
 # Higher-Kinded Types Use Cases
 
-* ### Library Design and Implementation
+### Library Design and Implementation
 
 Most of the use cases of higher-kinded types are found in library design and implementation. It provides the client more
 control over the exposed interfaces, while reducing code duplication. Scalaz, one of the most popular Scala projects,
 uses higher-kinded types to extend the core Scala library for functional programming.
 
-* ### Polymorphic Containers
+### Polymorphic Containers
 
 One use case of higher-kinded types is in creating polymorphic containers. Higher-kinded types are useful when we want
 to create a container that can hold any type of items; we don’t need a different type for each specific content type. As
 we already saw, Collection (in our previous example) allows various entity types.
 
-* ### Building Data Pipelines
+### Building Data Pipelines
 
 Data engineering involves reading, transforming and writing varieties of data. As the data variety and volume increase,
 the processes involved also increase.

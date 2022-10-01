@@ -28,39 +28,40 @@
 
     When expressions are referentially transparent, we can imagine that computation proceeds very much like we would solve an algebraic equation. We fully expand every part of an expression, replacing all variables with their referents, and then reduce it to its simplest form. At each step we replace a term with an equivalent one; we say that computation proceeds by substituting equals for equals. In other words, RT enables equational reasoning about programs.
 
-* ### Explain implicit classes with syntax?
+### Explain higher order functions.
 
-> Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
+    Higher order functions take other functions as parameters or return a function as a result. This is possible because functions are first-class values in Scala.
 
-* ### What Is Higher-Kinded Type?
+### Explain implicit classes with syntax?
 
-> A higher-kinded type is a type that abstracts over some type that, in turn, abstracts over another type. It’s a way to generically abstract over entities that take type constructors. They allow us to write modules that can work with a wide range of objects. So, we can as well say that it’s a type with a type constructor.
+    Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
+
+### What Is Higher-Kinded Type?
+
+    A higher-kinded type is a type that abstracts over some type that, in turn, abstracts over another type. It’s a way to generically abstract over entities that take type constructors. They allow us to write modules that can work with a wide range of objects. So, we can as well say that it’s a type with a type constructor.
 
 [More about for Higher Kinded Types](help/hkt.md)
 
-* ### Explain higher order functions.
 
-> Higher order functions take other functions as parameters or return a function as a result. This is possible because functions are first-class values in Scala.
+### Pros and cons of immutable objects?
 
-* ### Pros and cons of immutable objects?
+    Immutability has several advantages, including (but not limited to):
+    - Programs with immutable objects are less complicated to think about, since you don't need to worry about how an object may evolve over time.
+    - You don't need to make defensive copies of immutable objects when returning or passing to other functions, since there is no possibility an immutable object will be modified behind your back.
+    - One copy of an object is just as good as another, so you can cache objects or re-use the same object multiple times.
+    - Immutable objects are good for sharing information between threads in a multi-threaded environment since they don't need to be synchronized.
+    - Operations on immutable objects return new immutable objects while operations that cause side-effects on mutable objects usually return void. This means several operations can be chained together. For instance ```("foo" + "bar" + "baz").length()```
+    - In languages where functions are first class values, operations like map, reduce, filter, etc. are basic operations on collections. These can be combined in many ways, and can replace most loops in a program.
+    **There are of course some disadvantages:**
+    - Cyclic data structures such as graphs are difficult to build. If you have two objects which can't be modified after initialization, how can you get them to point to each other?
+    - Allocating lots and lots of small objects rather than modifying ones you already have can have a performance impact. Usually the complexity of either the allocator or the garbage collector depends on the number of objects on the heap.
+    - Naive implementations of immutable data structures can result in extremely poor performance. For instance, concatenating many immutable strings (like in Java) is O(n2) when the best algorithm is O(n). It is possible to write efficient immutable data structures, it just takes a little more thought.
 
-> Immutability has several advantages, including (but not limited to):
-> - Programs with immutable objects are less complicated to think about, since you don't need to worry about how an object may evolve over time.
-> - You don't need to make defensive copies of immutable objects when returning or passing to other functions, since there is no possibility an immutable object will be modified behind your back.
-> - One copy of an object is just as good as another, so you can cache objects or re-use the same object multiple times.
-> - Immutable objects are good for sharing information between threads in a multi-threaded environment since they don't need to be synchronized.
-> - Operations on immutable objects return new immutable objects while operations that cause side-effects on mutable objects usually return void. This means several operations can be chained together. For instance ```("foo" + "bar" + "baz").length()```
-> - In languages where functions are first class values, operations like map, reduce, filter, etc. are basic operations on collections. These can be combined in many ways, and can replace most loops in a program.
-> **There are of course some disadvantages:**
-> - Cyclic data structures such as graphs are difficult to build. If you have two objects which can't be modified after initialization, how can you get them to point to each other?
-> - Allocating lots and lots of small objects rather than modifying ones you already have can have a performance impact. Usually the complexity of either the allocator or the garbage collector depends on the number of objects on the heap.
-> - Naive implementations of immutable data structures can result in extremely poor performance. For instance, concatenating many immutable strings (like in Java) is O(n2) when the best algorithm is O(n). It is possible to write efficient immutable data structures, it just takes a little more thought.
-
-* ### What is tail recursion?
+### What is tail recursion?
     * #### How does it differentiate from common recursion?
-  > A recursive function is said to be tail recursive if the recursive call is the last thing done by the function. There is no need to keep record of the previous state.
+      A recursive function is said to be tail recursive if the recursive call is the last thing done by the function. There is no need to keep record of the previous state.
     * #### How does the Scala compiler optimize a tail recursive function?
-  > In tail recursive methods, all the computations are done before the recursive call, and the last statement is the recursive call. Compilers can then take advantage of this property to avoid stack overflow errors, since tail recursive calls can be optimized by not inserting info into the stack.
+      In tail recursive methods, all the computations are done before the recursive call, and the last statement is the recursive call. Compilers can then take advantage of this property to avoid stack overflow errors, since tail recursive calls can be optimized by not inserting info into the stack.
 
 Example:
 
@@ -104,14 +105,14 @@ tailSum(0, 15)
 15
 ```
 
-* ### What is function currying?
-* ### What are implicit parameters?
-* ### What are typeclasses?
-* ### What are lenses?
-* ### What is and which are the uses of: Enumerators, Enumeratees and Iteratee
-* ### What is a `functor`?
-* ### What is a `applicative`?
-* ### What is a `monad`?
+### What is function currying?
+### What are implicit parameters?
+### What are typeclasses?
+### What are lenses?
+### What is and which are the uses of: Enumerators, Enumeratees and Iteratee
+### What is a `functor`?
+### What is a `applicative`?
+### What is a `monad`?
     * #### What are the `monad` axioms?
     * #### What Scala data types are, or behave like, monads?
     * #### What are the basic and optional requirement/s to conform a Monad?
