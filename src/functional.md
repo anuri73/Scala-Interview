@@ -1,20 +1,20 @@
 # Functional Programming Questions:
 
-* ### What is pure function?
+### What is pure function?
 
-- Function without side effect (has no io, doesn't change variables, doesn't communicate with world)
-- For a given set of argument it will always return the same result
-- Referentially transparent (function call could be replaced by result of function)
+    * Function without side effect (has no io, doesn't change variables, doesn't communicate with world)
+    * For a given set of argument it will always return the same result
+    * Referentially transparent (function call could be replaced by result of function)
 
-* ### What is side effect?
+### What is side effect?
 
-- Reassigning a variable
-- Modifying a data structure in place
-- Setting a field on an object
-- Throwing an exception or halting with error
-- Printing to console or reading user input
-- Reading from or writing to a file
-- Drawing the screen
+    * Reassigning a variable
+    * Modifying a data structure in place
+    * Setting a field on an object
+    * Throwing an exception or halting with error
+    * Printing to console or reading user input
+    * Reading from or writing to a file
+    * Drawing the screen
 
 * ### Explain implicit classes with syntax?
 
