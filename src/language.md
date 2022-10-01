@@ -67,6 +67,10 @@ Traits are stackable. So, super calls are dynamically bound.|Abstract class is n
     - Case classes automatically define hashcode and equals
     - Case classes automatically define getter methods for the constructor arguments.
 
+### What is package in Scala?
+
+    A namespace without an object. The difference between a package and a module is that a package cannot contain val or def members and can't be passed around as if it were an object.
+
 ### Why do we need `App` in Scala
 
     App is a helper class that holds the main method
@@ -176,10 +180,10 @@ res0: scala.collection.immutable.IndexedSeq[Int] = Vector(2, 4, 6, 8, 10)
     Implicit parameters can lead to unexpected behavior if one is not aware of the precedence when looking up.
     So, what’s the order the compiler will look up for implicits?
 
-* implicits declared locally
-* imported implicits
-* outer scope (implicits declared in the class are considered outer scope in a class method for instance)
-* inheritance package object implicit scope like companion objects A nice set of examples can be found here.
+    * implicits declared locally
+    * imported implicits
+    * outer scope (implicits declared in the class are considered outer scope in a class method for instance)
+    * inheritance package object implicit scope like companion objects A nice set of examples can be found here.
 
 ### What operations is a `for comprehension` syntactic sugar for?
 
