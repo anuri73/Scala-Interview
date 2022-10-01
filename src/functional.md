@@ -24,6 +24,10 @@
 
     An effect is anything that can be observed from outside the programs
 
+### How do you understand substitution model?
+
+    When expressions are referentially transparent, we can imagine that computation proceeds very much like we would solve an algebraic equation. We fully expand every part of an expression, replacing all variables with their referents, and then reduce it to its simplest form. At each step we replace a term with an equivalent one; we say that computation proceeds by substituting equals for equals. In other words, RT enables equational reasoning about programs.
+
 * ### Explain implicit classes with syntax?
 
 > Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
