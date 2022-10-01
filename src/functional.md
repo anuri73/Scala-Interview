@@ -22,7 +22,7 @@
 
 ### What does observable mean?
 
-    ???
+    An effect is anything that can be observed from outside the programs
 
 * ### Explain implicit classes with syntax?
 
