@@ -13,10 +13,10 @@
 Example:
 
 ```scala
-def sum(n: Int): Int = { // computes the sum of the first n natural numbers
-  if (n == 0) {
-    n
-  } else {
+// computes the sum of the first n natural numbers
+def sum(n: Int): Int = {
+  if (n == 0) 0
+  else {
     n + sum(n - 1)
   }
 }
