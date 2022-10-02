@@ -32,6 +32,10 @@
 
     Higher order functions take other functions as parameters or return a function as a result. This is possible because functions are first-class values in Scala.
 
+### What is anonymous function?
+
+    In Scala, anonymous function also known as function literal. A function which does not contain name is knonw as an anonymous function.
+
 ### Explain implicit classes with syntax?
 
     Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
@@ -41,7 +45,6 @@
     A higher-kinded type is a type that abstracts over some type that, in turn, abstracts over another type. It’s a way to generically abstract over entities that take type constructors. They allow us to write modules that can work with a wide range of objects. So, we can as well say that it’s a type with a type constructor.
 
 [More about for Higher Kinded Types](help/hkt.md)
-
 
 ### Pros and cons of immutable objects?
 
@@ -58,13 +61,21 @@
     - Naive implementations of immutable data structures can result in extremely poor performance. For instance, concatenating many immutable strings (like in Java) is O(n2) when the best algorithm is O(n). It is possible to write efficient immutable data structures, it just takes a little more thought.
 
 ### What is function currying?
+
 ### What are implicit parameters?
-### What are typeclasses?
+
+### What are type classes?
+
 ### What are lenses?
-### What is and which are the uses of: Enumerators, Enumeratees and Iteratee
+
+### What is and which are the uses of: Enumerators, Enumerates and Iteratee
+
 ### What is a `functor`?
+
 ### What is a `applicative`?
+
 ### What is a `monad`?
+
     * #### What are the `monad` axioms?
     * #### What Scala data types are, or behave like, monads?
     * #### What are the basic and optional requirement/s to conform a Monad?
