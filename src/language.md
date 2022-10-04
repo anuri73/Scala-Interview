@@ -81,11 +81,6 @@ Traits are stackable. So, super calls are dynamically bound.|Abstract class is n
     * Method parameters
     * Local variables
 
-### What is tail calls in Scala?
-
-    A call is said to be in 'tail position' if the caller does nothing other than return the value of recoursive call 
-[More about for Tail recursion](help/tail_recursion.md)
-
 ### What is the difference between a Java future and a Scala future? The main inconvenience
 
     The main inconvenience of `java.util.concurrent.Future` is the fact that you can't get the value without blocking. In fact, the only way to retrieve a value is the get method, that ([quoting from the docs](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html))

@@ -8,6 +8,7 @@ or preparing for the Scala position interview.
 1. [General Questions](src/general.md)
 1. [Language Questions](src/language.md)
 1. [Functional Programming Questions](src/functional.md)
+1. [Annotations](src/annotation.md)
 1. [Reactive Programming Questions](src/reactive.md)
 1. [Coding Questions](src/coding.md)
 1. [Fun Questions](src/fun.md)

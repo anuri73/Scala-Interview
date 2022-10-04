@@ -1,45 +1,28 @@
 import scala.annotation.tailrec
 
-object AbsModule {
-  def abs(n: Int): Int =
-    if (n < 0) -n
-    else n
-  private def formatAbs(x: Int) = {
-    val msg = "The absolute value of %d is %d"
-    msg.format(x, abs(x))
-  }
-  def main(args: Array[String]): Unit =
-    println(formatAbs(-42))
-}
-
-object FactorialModule {
-  def factorial(n: Int): Int = {
-    @tailrec
-    def go(n: Int, acc: Int): Int =
-      if (n <= 0) acc
-      else go(n - 1, n * acc)
-    go(n, 1)
-  }
-}
-
-object FibonachiModule {
-  def fib(n: Int): Int = {
-    @annotation.tailrec
-    def go(index: Int, prev: Int, current: Int): Int = {
-      if (index <= 0)
-        current
-      else
-        go(index - 1, prev = prev + current, prev)
+def binarySearch[@specialized A](
+    as: Array[A],
+    key: A,
+    gt: (A, A) => Boolean
+): Int = {
+  @tailrec
+  def go(low: Int, mid: Int, high: Int): Int = {
+    if (low > high) -mid - 1
+    else {
+      val mid2 = (low + high) / 2
+      val d = as(mid2)
+      val greater = gt(d, key)
+      if (!greater && !gt(key, d)) mid2
+      else if (greater) go(low, mid2, mid2 - 1)
+      else go(mid2 + 1, mid2, high)
     }
-
-    go(n, 1, 0)
   }
+  go(0, 0, as.length - 1)
 }
 
-def formatResult(name: String, n: Int, f: Int => Int): String = {
-  val message = "The %s of %d is %d"
-  message.format(name, n, f(n))
-}
+val ds = Array(0.0, 1.0, 3.0, 9.0, 4.0, 5.0, 6.0)
+binarySearch(ds, 9.0, _ > _)
 
-formatResult("absolute value", -42, AbsModule.abs)
-formatResult("factorial", 7, FactorialModule.factorial)
+def isSorted[A](ds: Array[A], gt: (A, A) => Boolean): Boolean = {
+  true
+}

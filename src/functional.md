@@ -36,6 +36,10 @@
 
     In Scala, anonymous function also known as function literal. A function which does not contain name is knonw as an anonymous function.
 
+### What is type parameter?
+
+    It is language cunstruction, that lets you choose the type(s) at the moment of the object's creation
+
 ### Explain implicit classes with syntax?
 
     Implicit classes allow implicit conversations with class's primary constructor when the class is in the scope
